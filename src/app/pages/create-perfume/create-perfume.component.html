@@ -1,0 +1,28 @@
+<div class="custom-perfume-form">
+    <h2>🌸 Créer mon parfum Bella</h2>
+  
+    <label>Nom du parfum :</label>
+    <input type="text" [(ngModel)]="custom.name" placeholder="Ex : Élégance Suprême" />
+  
+    <label>Choisissez vos ingrédients :</label>
+    <div class="ingredient-list">
+      <label *ngFor="let ing of ingredientOptions">
+        <input
+          type="checkbox"
+          [ngModel]="custom.ingredients.includes(ing)"
+          (ngModelChange)="updateIngredients(ing, $event)"
+          name="ingredient-{{ing}}"
+        />
+        {{ ing }}
+      </label>
+    </div>
+  
+    <label>Message personnalisé sur le flacon (optionnel) :</label>
+    <input type="text" [(ngModel)]="custom.bottle_message" placeholder="Ex : Pour Sarah 💖" />
+    
+  
+    <button (click)="submitCustomPerfume()">✨ Créer mon parfum </button>
+  
+    <p *ngIf="confirmation">{{ confirmation }}</p>
+  </div>
+  

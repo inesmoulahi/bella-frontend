@@ -1,0 +1,102 @@
+.contact-form {
+    max-width: 500px;
+    margin: 3rem auto;
+    background: #fff9f9;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    font-family: 'Segoe UI', sans-serif;
+  }
+  
+  .contact-form h2 {
+    text-align: center;
+    color: #d81b60;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contact-form form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    margin-bottom: 1rem;
+    padding: 0.9rem;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border 0.3s;
+  }
+  
+  .contact-form input:focus,
+  .contact-form textarea:focus {
+    border-color: #d81b60;
+    outline: none;
+  }
+  
+  .contact-form textarea {
+    resize: vertical;
+    min-height: 120px;
+  }
+  
+  .contact-form button {
+    padding: 0.9rem;
+    background-color: #d81b60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+  }
+  
+  .contact-form button:hover {
+    background-color: #ad1457;
+  }
+  
+  .contact-form p {
+    text-align: center;
+    margin-top: 1rem;
+    color: green;
+    font-weight: 500;
+  }
+  
+  /* Historique messages */
+  .message-history {
+    margin-top: 3rem;
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 1rem;
+    border-radius: 10px;
+  }
+  
+  .message-box {
+    background: #fce4ec;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    border-left: 5px solid #ec407a;
+  }
+  
+  .message-box strong {
+    color: #c2185b;
+  }
+  input.invalid {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+}
+input.invalid {
+  border-color: red;
+}
+
+.error-message {
+  color: red;
+  font-size: 13px;
+  margin-bottom: 0.5rem;
+}

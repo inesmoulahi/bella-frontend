@@ -1,0 +1,29 @@
+<nav class="navbar">
+  <a routerLink="/" class="logo-link">
+    <img src="assets/images/logo.png" alt="Bella Logo" class="logo-image" />
+  </a>
+  
+
+  <ul class="nav-links">
+    <li><a routerLink="/">🏠 Accueil</a></li>
+    <li><a routerLink="/products">🛍️ Produits</a></li>
+    <li><a routerLink="/cart">🛒 Panier</a></li>
+    <li><a routerLink="/checkout">✅ Commander</a></li>
+   
+  
+    
+    <li><a routerLink="/contact">📨 Contact</a></li>
+    <li><a routerLink="/create-perfume">Créer Mon Parfum</a></li>
+    <li><a routerLink="/conseil">💬 Conseil Parfum</a></li>
+    <li *ngIf="!user"><a routerLink="/login">🔐 Connexion</a></li>
+    <li *ngIf="!user"><a routerLink="/register">🆕 S’inscrire</a></li>
+
+    <li *ngIf="user">
+      <span class="hello">👋 Bonjour, {{ user.name }}</span>
+    </li>
+
+    <li *ngIf="user"><a (click)="logout()">🚪 Déconnexion</a></li>
+    <li *ngIf="isAdmin"><a routerLink="/admin">👑 Admin</a></li>
+  </ul>
+</nav>
+

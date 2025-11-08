@@ -1,0 +1,16 @@
+.success-message {
+  text-align: center;
+  margin-top: 5rem;
+  background: #f0f0f0;
+  padding: 2rem;
+  border-radius: 12px;
+}
+.success-message h2 {
+  color: #4caf50;
+}
+.success-message a {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #e91e63;
+  text-decoration: none;
+}

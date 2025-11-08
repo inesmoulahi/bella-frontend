@@ -1,0 +1,21 @@
+<div class="chatbot-container" [class.open]="showChat">
+    <div class="chatbot-header" (click)="toggleChat()">
+      🤖  BellaBot
+    </div>
+  
+    <div class="chatbot-body" *ngIf="showChat">
+      <div class="messages">
+        <div *ngFor="let msg of messages">
+          <p [class.user]="msg.startsWith('👤')">{{ msg }}</p>
+          <img *ngIf="msg.includes('dt')" [src]="'assets/images/' + lastImage" class="perfume-img" />
+
+        </div>
+      </div>
+  
+      <div class="chatbot-input">
+        <input [(ngModel)]="userInput" (keyup.enter)="send()" placeholder="Ta réponse..." />
+        <button (click)="send()">Envoyer</button>
+      </div>
+    </div>
+  </div>
+  

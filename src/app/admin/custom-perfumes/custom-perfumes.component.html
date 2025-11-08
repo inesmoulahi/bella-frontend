@@ -1,0 +1,41 @@
+<div class="admin-page">
+    <h2>🧪 Créations personnalisées des clients</h2>
+  
+    <table *ngIf="perfumes.length > 0">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Client</th>
+          <th>Nom du parfum</th>
+          <th>Ingrédients</th>
+          <th>Message</th>
+          <th>Date</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let p of perfumes">
+            <td data-label="ID">{{ p.id }}</td>
+            <td data-label="Client">{{ p.user_id }}</td>
+            <td data-label="Nom">{{ p.name }}</td>
+            <td data-label="Ingrédients">{{ p.ingredients }}</td>
+            <td data-label="Message">{{ p.bottle_message }}</td>
+            <td data-label="Date">{{ p.created_at }}</td>
+          </tr>
+          
+      </tbody>
+    </table>
+  
+    <p *ngIf="perfumes.length === 0">Aucune création pour l’instant.</p>
+  </div>
+  <tr *ngFor="let p of perfumes">
+    <td data-label="ID">{{ p.id }}</td>
+    <td data-label="Client">{{ p.user_id }}</td>
+    <td data-label="Nom">{{ p.name }}</td>
+    <td data-label="Ingrédients">{{ p.ingredients }}</td>
+    <td data-label="Message">{{ p.bottle_message }}</td>
+    <td data-label="Date">{{ p.created_at }}</td>
+    <td>
+      <button (click)="imprimerParfum(p)">🖨️</button>
+    </td>
+  </tr>
+  

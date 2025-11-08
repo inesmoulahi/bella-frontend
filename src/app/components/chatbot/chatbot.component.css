@@ -1,0 +1,74 @@
+.chatbot-container {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 320px;
+    max-height: 500px;
+    font-family: Arial;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background: white;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+    overflow: hidden;
+  }
+  
+  .chatbot-header {
+    background: #da378b;
+    color: white;
+    padding: 1rem;
+    cursor: pointer;
+    font-weight: bold;
+  }
+  
+  .chatbot-body {
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+  }
+  
+  .messages {
+    flex: 1;
+    padding: 1rem;
+    overflow-y: auto;
+    background: #f9f9f9;
+  }
+  
+  .messages p {
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    border-radius: 6px;
+    background: #ffe6f3;
+  }
+  
+  .messages p.user {
+    background: #c8e6c9;
+    text-align: right;
+  }
+  
+  .chatbot-input {
+    display: flex;
+    padding: 0.5rem;
+    border-top: 1px solid #ddd;
+  }
+  
+  .chatbot-input input {
+    flex: 1;
+    padding: 0.5rem;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  .chatbot-input button {
+    margin-left: 0.5rem;
+    padding: 0.5rem 1rem;
+    background: #ef65aa;
+    color: white;
+    border: none;
+    border-radius: 4px;
+  }
+  .perfume-img {
+    max-width: 100%;
+    border-radius: 6px;
+    margin-top: 0.5rem;
+  }
+  

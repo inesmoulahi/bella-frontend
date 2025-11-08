@@ -1,0 +1,98 @@
+<div class="admin-panel">
+  <h2>👑 Panneau d'administration</h2>
+
+<div class="dashboard">
+  <div class="card">
+    <h3>📦 Produits</h3>
+    <p>{{ stats.products }}</p>
+  </div>
+  <div class="card">
+    <h3>👤 Utilisateurs</h3>
+    <p>{{ stats.users }}</p>
+  </div>
+  <div class="card">
+    <h3>🛒 Commandes</h3>
+    <p>{{ stats.orders }}</p>
+  </div>
+  <div class="card">
+    <h3>💰 Ventes totales</h3>
+    <p>{{ stats.sales }} dt</p>
+  </div>
+</div>
+<h1><li><a routerLink="/admin/custom-perfumes">😍✨Créations Bella</a></li></h1>
+
+
+  <h3>Liste des produits disponibles :</h3>
+
+
+<div class="product" *ngFor="let product of products">
+  <img [src]="'assets/images/' + product.image" alt="{{ product.name }}" />
+  <h4>{{ product.name }}</h4>
+  <p>{{ product.details }}</p>
+  <strong>{{ product.price }} dt</strong>
+  <br />
+ 
+  <button class="btn-delete" (click)="deleteProduct(product.id)">🗑 Supprimer</button>
+  
+
+  <button class="btn-edit" (click)="startEdit(product, editDialog)">✏️ Modifier</button>
+
+</div>
+
+
+
+<h3>➕ Ajouter un nouveau produit</h3>
+
+<form (ngSubmit)="addProduct()" #productForm="ngForm" class="form-add">
+  <input type="text" [(ngModel)]="newProduct.name" name="name" placeholder="Nom du produit" required />
+  <input type="text" [(ngModel)]="newProduct.details" name="details" placeholder="Description" required />
+  <input type="number" [(ngModel)]="newProduct.price" name="price" placeholder="Prix" required />
+  <input type="text" [(ngModel)]="newProduct.image" name="image" placeholder="Nom du fichier image (ex: rose.jpg)" required />
+  <button type="submit">Ajouter</button>
+</form>
+<dialog #editDialog >
+  <form *ngIf="editProduct" (ngSubmit)="saveProduct()" class="form-edit-dialog">
+    <h3>✏️ Modifier le produit</h3>
+
+    <input type="text" [(ngModel)]="editProduct.name" name="editName" placeholder="Nom" required />
+    <input type="text" [(ngModel)]="editProduct.details" name="editDetails" placeholder="Détails" required />
+    <input type="number" [(ngModel)]="editProduct.price" name="editPrice" placeholder="Prix" required />
+    <input type="text" [(ngModel)]="editProduct.image" name="editImage" placeholder="Image" required />
+
+    <button type="submit">✅ Valider</button>
+    <button type="button" (click)="closeDialog()">❌ Annuler</button>
+  </form>
+</dialog>
+
+<h3>📨 Messages des clients</h3>
+
+<table class="messages-table">
+  <thead>
+    <tr>
+      <th>Nom</th>
+      <th>Email</th>
+      <th>Téléphone</th>
+      <th>Message</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let msg of messages">
+  <td>{{ msg.name }}</td>
+  <td>{{ msg.email }}</td>
+  <td>{{ msg.number }}</td>
+  <td>
+    {{ msg.message }}
+    <div *ngIf="msg.reply">
+      <strong>Réponse :</strong> {{ msg.reply }}
+    </div>
+
+    <div *ngIf="!msg.reply">
+      <textarea [(ngModel)]="replyTexts[msg.id]" placeholder="Répondre..."></textarea>
+      <button (click)="sendReply(msg.id)">📤 Envoyer</button>
+    </div>
+  </td>
+</tr>
+
+  </tbody>
+</table>
+

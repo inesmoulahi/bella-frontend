@@ -1,0 +1,75 @@
+/* Style global de la section produits */
+.products-section {
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  /* Titre de la vitrine */
+  .products-section .title {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+    color: var(--black); /* ou une couleur de ton choix */
+  }
+  
+  /* Conteneur en grille pour les produits */
+  .box-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+    gap: 1.5rem;
+    align-items: start;
+    justify-content: center;
+  }
+  
+  /* Style pour chaque carte produit */
+  .box {
+    background: #fff;
+    border: 0.2rem solid #333;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .box:hover {
+    transform: translateY(-0.5rem);
+  }
+  
+  /* Image du produit */
+  .product-image {
+    width: 100%;
+    height: 15rem;
+    object-fit: cover;
+    border-radius: 0.5rem;
+  }
+  
+  /* Nom du produit */
+  .product-name {
+    font-size: 2rem;
+    margin: 1rem 0 0.5rem;
+    color: #333;
+  }
+  
+  /* Prix du produit */
+  .product-price {
+    font-size: 1.8rem;
+    color: var(--red);
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Bouton */
+  .btn {
+    background-color: var(--pink);
+    color: #fff;
+    border: none;
+    padding: 1rem 2rem;
+    font-size: 1.8rem;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn:hover {
+    background-color: var(--black);
+  }
+  

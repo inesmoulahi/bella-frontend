@@ -1,0 +1,33 @@
+.checkout-container {
+    padding: 2rem;
+    max-width: 600px;
+    margin: auto;
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  input, textarea, select {
+    padding: 1rem;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .btn {
+    background-color: #e91e63;
+    color: white;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: #c2185b;
+  }
+  
+  
+  

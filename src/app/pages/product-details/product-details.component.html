@@ -1,0 +1,32 @@
+<div class="product-details" *ngIf="product.name">
+    <img [src]="'assets/images/' + product.image" alt="{{ product.name }}" class="detail-image" />
+  
+    <div class="info">
+      <h2>{{ product.name }}</h2>
+     
+      
+      <p>{{ product.details }}</p>
+      <p class="price">{{ product.price }} dt</p>
+      <div class="reviews-section">
+        <h3>📝 Avis des clients :</h3>
+      
+        <div *ngFor="let r of reviews" class="review">
+          <p>⭐ {{ r.rating }}/5</p>
+          <p>{{ r.comment }}</p>
+        </div>
+      
+        <div class="add-review">
+          <h4>➕ Laisser un avis :</h4>
+          <textarea [(ngModel)]="newReview.comment" placeholder="Votre avis" required></textarea>
+          <select [(ngModel)]="newReview.rating">
+            <option *ngFor="let n of [5,4,3,2,1]" [value]="n">{{ n }} étoiles</option>
+          </select>
+          <button (click)="submitReview()">Envoyer</button>
+        </div>
+      </div>
+      
+  
+      
+    </div>
+  </div>
+  

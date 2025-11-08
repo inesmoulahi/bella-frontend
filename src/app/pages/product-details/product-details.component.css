@@ -1,0 +1,54 @@
+.product-details {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+  }
+  
+  .detail-image {
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+  }
+  
+  .info {
+    flex: 1;
+  }
+  
+  .price {
+    font-size: 2rem;
+    color: #e91e63;
+  }
+  .reviews-section {
+    margin-top: 2rem;
+  }
+  
+  .review {
+    background: #f9f9f9;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 8px;
+  }
+  
+  .add-review textarea, .add-review select {
+    width: 100%;
+    padding: 0.8rem;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+  }
+  
+  .add-review button {
+    padding: 0.8rem 2rem;
+    background-color: #d81b60;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+  
+  .add-review button:hover {
+    background-color: #ad1457;
+  }
+  
+ 

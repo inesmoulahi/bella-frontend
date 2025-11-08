@@ -1,0 +1,12 @@
+<div class="register-container">
+  <h2>Créer un compte</h2>
+
+  <form (ngSubmit)="register()">
+    <input type="text" [(ngModel)]="user.name" name="name" placeholder="Nom complet" required />
+    <input type="email" [(ngModel)]="user.email" name="email" placeholder="Email" required email />
+    <input type="password" [(ngModel)]="user.password" name="password" placeholder="Mot de passe" required />
+    <button type="submit" class="btn">S'inscrire</button>
+  </form>
+
+  <p *ngIf="message">{{ message }}</p>
+</div>

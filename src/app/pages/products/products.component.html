@@ -1,0 +1,18 @@
+<div class="products-section">
+    <h1 class="title">Vitrine des Parfums</h1>
+    <div class="box-container">
+      <!-- On parcourt la liste des produits avec *ngFor -->
+      <div class="box" *ngFor="let product of products">
+        <!-- Affiche l'image du produit. On suppose que les images sont stockées dans src/assets/images -->
+        <a [routerLink]="['/product', product.id]">
+            <img [src]="'assets/images/' + product.image" alt="{{ product.name }}" class="product-image" />
+          </a>
+          
+        <h3 class="product-name">{{ product.name }}</h3>
+        <p class="product-price">{{ product.price }} dt</p>
+        <button (click)="addToCart(product)" class="btn">Ajouter au panier</button>
+
+      </div>
+    </div>
+  </div>
+  

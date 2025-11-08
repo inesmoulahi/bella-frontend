@@ -1,0 +1,20 @@
+<div class="checkout-container">
+  <h2>Valider votre commande</h2>
+
+  <form (ngSubmit)="submitOrder()">
+    <input type="text" placeholder="Nom complet" [(ngModel)]="order.name" name="name" required />
+    <input type="text" placeholder="Numéro de téléphone" [(ngModel)]="order.number" name="number" required />
+    <input type="email" placeholder="Email" [(ngModel)]="order.email" name="email" required />
+    <textarea placeholder="Adresse complète" [(ngModel)]="order.address" name="address" required></textarea>
+
+    <select [(ngModel)]="order.method" name="method" required>
+      <option value="paypal">PayPal</option>
+      <option value="credit card">Carte de crédit</option>
+      <option value="cash on delivery">Paiement à la livraison</option>
+    </select>
+
+    <button type="submit" class="btn">Passer la commande</button>
+  </form>
+
+  <p *ngIf="message">{{ message }}</p>
+</div>
